@@ -1,19 +1,31 @@
 {
   "name": "feed-automation-tool",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
+    "server": "node server/index.js",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "start": "node server/index.js",
+    "collect": "node server/jobs/collect.js",
+    "generate": "node server/jobs/generate.js",
+    "publish": "node server/jobs/publish.js"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
     "vite": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "lucide-react": "latest"
+    "lucide-react": "latest",
+    "express": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "better-sqlite3": "latest",
+    "rss-parser": "latest",
+    "openai": "latest",
+    "node-cron": "latest",
+    "canvas": "latest"
   },
   "devDependencies": {}
 }
